@@ -205,7 +205,9 @@ export default function RingStudioPage() {
         <directionalLight position={[-12, 10, 12]} intensity={3.0} />
         <directionalLight position={[0, -12, -12]} intensity={0.55} />
 
-        <Environment files="/hdr/studio.hdr" background={false} intensity={4.5} />
+        <Environment files="/hdr/studio.hdr" background={false} />
+        <ambientLight intensity={0.25} />
+
 
         <Suspense fallback={null}>
           <RingModel isUserInteracting={isUserInteracting} />
